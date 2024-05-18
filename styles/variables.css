@@ -1,4 +1,14 @@
-/*
+:root {
+  --bg-image: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070;
+  --header__title-color: #DB00FF;
+  --subtitle-decor-color: #000028;
+  --text-color: #F1B2CE;
+  --page-gap: clamp(1.875rem, 0.086rem + 7.634vi, 3.75rem);
+  --text-shadow: ;
+  
+  /*--main-font: 'IBM Plex mono', sans-serif;*/
+}/*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */

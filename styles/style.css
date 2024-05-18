@@ -1,5 +1,184 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--page-gap, 50px);
+  /*gap: clamp(3.125rem, 2.529rem + 2.545vi, 3.75rem);
+  /*font-family: var(--main-font, 'IBM Plex mono');*/
+  font-family:'IBM Plex mono', sans-serif;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  inline-size: 100%;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr min-content  1fr; 
+  align-items: center;
+  block-size: 100vb;
+  padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color, #FF0070);
+  border-block-end: 1px solid var(--accent-color, #FF0070);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--accent-color, #FF0070);
+  border-block-start: 1px solid var(--accent-color, #FF0070);
+  
+  
+}
+.decorated-zone-item {
+position: absolute;
+right: 1.2rem;
+top: 0.6rem;
+text-transform: uppercase;
+font-size: 1.1rem;
+color: var(--accent-color, #FF0070);
+}
+
+.decorated-zone-item::after {
+content: "";
+display: inline-block;
+background-color: var(--accent-color, #FF0070);
+margin-inline-start: 10px;
+margin-block: 2px;
+inline-size: 9px;
+block-size: 9px;
+border-radius: 50%;
+box-shadow:  0 0 4px 2px red ;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-inline-end: 8px;
+  
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-item {
+  
+ 
+}
+
+.header__theme-menu-button {
+  margin-block: 8px;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: lowercase;
+  color: var(--accent-color, #FF0070);
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header__title-color, #DB00FF);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
+  align-self: end;
+}
+
+.header__text {
+  justify-self: end;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--title-decor-color, #000028);
+  background-color: var(--accent-color, #FF0070);
+ /* max-inline-size: 50%; */
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+}
+
+.subtitle-decor {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--subtitle-decor-color, #000028);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.main__section {
+  padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
+}
+ 
+.main__section:not(:last-child) {
+  margin-block-end: var(--page-gap, 50px);
+}
+
+.section__title {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: bold;
+  color: var(--accent-color, #FF0070);
+  margin-block-end: 20px;
+  
+}
+
+.section__subtitle {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: bold;
+   margin-block-end: 10px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: normal;
+   color: var(--text-color,#F1B2CE);
+}
+
+.text:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.difference-text-container .section__subtitle:first-of-type {
+  margin-block-end: 20px;
+}
+
+.difference-text-container .section__subtitle:not(:first-of-type) {
+  font-weight: normal;
+}
+ 
+.gallery-container .section__subtitle {
+margin: 0;
+}
+
+.gallery-container {
+
+}
+
+.gallery-container:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.image {
+  inline-size: 100%;
+  object-position: center;
+  object-fit: contain;
 }
