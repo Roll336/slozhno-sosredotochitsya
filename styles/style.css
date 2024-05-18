@@ -91,21 +91,17 @@ box-shadow:  0 0 4px 2px red ;
   color: var(--accent-color, #FF0070);
 }
 
-.header__title {
-  font-weight: bold;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+.title {
+  font-size: var(--title__font-size);
   line-height: 82.5%;
+  font-weight: bold;
   color: var(--header__title-color, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-  align-self: end;
 }
 
-.header__text {
+.header .subtitle {
+  margin: 0;
   justify-self: end;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--title-decor-color, #000028);
-  background-color: var(--accent-color, #FF0070);
  /* max-inline-size: 50%; */
 }
 
@@ -114,12 +110,12 @@ box-shadow:  0 0 4px 2px red ;
   border: none;
 }
 
-.subtitle-decor {
-  background-color: var(--accent-color, #FF0070);
-  color: var(--subtitle-decor-color, #000028);
+/*.subtitle-decor {
   font-size: 18px;
   font-weight: bold;
-}
+  background-color: var(--accent-color, #FF0070);
+  color: var(--subtitle-decor-color, #000028); 
+}*/
 
 
 .main__section {
@@ -139,11 +135,13 @@ box-shadow:  0 0 4px 2px red ;
   
 }
 
-.section__subtitle {
+.subtitle {
   font-size: 18px;
   line-height: 130%;
   font-weight: bold;
-   margin-block-end: 10px;
+  background-color: var(--accent-color, #FF0070);
+  color: var(--subtitle-decor-color, #000028); 
+  margin-block-end: 10px;
 }
 
 .text {
@@ -157,15 +155,20 @@ box-shadow:  0 0 4px 2px red ;
   margin-block-end: 20px;
 }
 
-.difference-text-container .section__subtitle:first-of-type {
+.difference-text-container .subtitle:first-of-type {
   margin-block-end: 20px;
 }
 
-.difference-text-container .section__subtitle:not(:first-of-type) {
+.difference-text-container .subtitle:not(:first-of-type) {
   font-weight: normal;
 }
+
+.gallery {
+  display: grid;
+  gap: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
+}
  
-.gallery-container .section__subtitle {
+.gallery .subtitle {
 margin: 0;
 }
 
@@ -174,11 +177,27 @@ margin: 0;
 }
 
 .gallery-container:not(:last-child) {
-  margin-block-end: 10px;
+ /* margin-block-end: 10px;*/
 }
 
 .image {
+  /*display: block;*/
   inline-size: 100%;
   object-position: center;
   object-fit: contain;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vb;
+}
+
+/*.title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  font-weight: bold;
+  color: var(--header__title-color, #DB00FF);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }

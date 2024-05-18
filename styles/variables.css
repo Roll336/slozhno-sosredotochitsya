@@ -2,6 +2,7 @@
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #FF0070;
   --header__title-color: #DB00FF;
+  --title__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --subtitle-decor-color: #000028;
   --text-color: #F1B2CE;
   --page-gap: clamp(1.875rem, 0.086rem + 7.634vi, 3.75rem);
