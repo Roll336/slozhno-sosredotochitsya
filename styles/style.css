@@ -1,11 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  display: flex;
+ /* display: flex;
   flex-direction: column;
-  gap: var(--page-gap, 50px);
-  /*gap: clamp(3.125rem, 2.529rem + 2.545vi, 3.75rem);
-  /*font-family: var(--main-font, 'IBM Plex mono');*/
+  row-gap: clamp(1.875rem, 12.723vw - 1.107rem, 5rem);*/
   font-family:'IBM Plex mono', sans-serif;
   background-image: var(--bg-image);
   background-position: center;
@@ -22,13 +20,16 @@
   align-items: center;
   block-size: 100vb;
   padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
+  margin-block-end: clamp(2.5rem, 5.089vw + 1.307rem, 3.75rem);
 }
+
+
 
 .header::before {
   content: "";
   position: absolute;
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  inset-inline-start: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  inset-block-end: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
   inline-size: 25px;
   block-size: 25px;
   border-inline-start: 1px solid var(--accent-color, #FF0070);
@@ -38,19 +39,18 @@
 .header::after {
   content: "";
   position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
+  inset-block-start: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  inset-inline-end: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
   inline-size: 25px;
   block-size: 25px;
   border-inline-end: 1px solid var(--accent-color, #FF0070);
   border-block-start: 1px solid var(--accent-color, #FF0070);
-  
-  
 }
+
 .decorated-zone-item {
 position: absolute;
-right: 1.2rem;
-top: 0.6rem;
+right: clamp(1.188rem, 2.799vw + 0.531rem, 1.875rem);
+top: clamp(0.625rem, 2.29vw + 0.088rem, 1.188rem);
 text-transform: uppercase;
 font-size: 1.1rem;
 color: var(--accent-color, #FF0070);
@@ -70,9 +70,11 @@ box-shadow:  0 0 4px 2px red ;
 
 .header__theme-menu {
   justify-self: end;
-  margin-inline-end: 8px;
+  margin-inline-end: ;
   
 }
+
+
 
 .header__theme-menu-list {
 
@@ -84,31 +86,51 @@ box-shadow:  0 0 4px 2px red ;
 }
 
 .header__theme-menu-button {
-  margin-block: 8px;
   font-size: 18px;
   line-height: 1;
   text-transform: lowercase;
   color: var(--accent-color, #FF0070);
+  margin-block: 6px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  padding-inline: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.header__theme-menu-button:hover {
+border: 1px solid  var(--hover-border-color, rgba(255, 0, 112, 0.4));
+cursor: pointer;
+}
+
+.header__theme-menu-button:focus, .link:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid currentColor;
 }
 
 .title {
   font-size: var(--title__font-size);
   line-height: 82.5%;
   font-weight: bold;
-  color: var(--header__title-color, #DB00FF);
+  color: var(--title-color, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
 .header .subtitle {
   margin: 0;
   justify-self: end;
+  inline-size: var(--header__subtitle-inline-size);
  /* max-inline-size: 50%; */
 }
 
-.header__theme-menu-button {
-  background-color: transparent;
-  border: none;
-}
 
 /*.subtitle-decor {
   font-size: 18px;
@@ -116,21 +138,26 @@ box-shadow:  0 0 4px 2px red ;
   background-color: var(--accent-color, #FF0070);
   color: var(--subtitle-decor-color, #000028); 
 }*/
-
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.125rem, 7.634vw + 1.336rem, 5rem);
+  margin-block-end: clamp(2.5rem, 5.089vw + 1.307rem, 3.75rem);
+}
 
 .main__section {
-  padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
+  padding-inline: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
 }
  
-.main__section:not(:last-child) {
-  margin-block-end: var(--page-gap, 50px);
-}
+/*.main__section:not(:last-child) {
+  margin-block-end: clamp(1.875rem, 12.723vw - 1.107rem, 5rem);
+}*/
 
 .section__title {
   font-size: 18px;
   line-height: 130%;
   font-weight: bold;
-  color: var(--accent-color, #FF0070);
+  color: var(--section-title-color, #FF0070);
   margin-block-end: 20px;
   
 }
@@ -148,11 +175,28 @@ box-shadow:  0 0 4px 2px red ;
   font-size: 18px;
   line-height: 130%;
   font-weight: normal;
-   color: var(--text-color,#F1B2CE);
+  color: var(--text-color,#F1B2CE);
 }
 
 .text:not(:last-of-type) {
   margin-block-end: 20px;
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--text-color, #F1B2CE);
+}
+
+.link:focus-visible {
+  display: inline-block;
+  outline: 1px solid currentColor;
+  line-height: 0.5;
+  padding-bottom: 5px;
+
 }
 
 .difference-text-container .subtitle:first-of-type {
@@ -169,7 +213,7 @@ box-shadow:  0 0 4px 2px red ;
 }
  
 .gallery .subtitle {
-margin: 0;
+  margin: 0;
 }
 
 .gallery-container {
@@ -183,15 +227,43 @@ margin: 0;
 .image {
   /*display: block;*/
   inline-size: 100%;
+  block-size: 100%;
   object-position: center;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .footer {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   block-size: 100vb;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color, #FF0070);
+  border-block-end: 1px solid var(--accent-color, #FF0070);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--accent-color, #FF0070);
+  border-block-start: 1px solid var(--accent-color, #FF0070);
+}
+
+.footer .title {
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
 /*.title {
@@ -200,4 +272,4 @@ margin: 0;
   font-weight: bold;
   color: var(--header__title-color, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-}
+}*/
