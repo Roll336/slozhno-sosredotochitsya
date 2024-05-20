@@ -1,21 +1,15 @@
 :root {
   --bg-image: url(../images/cover-image-dark.png);
-  --accent-color: #FF0070;
-  --decor-color: #FF0070;
-  --title-color: #DB00FF;
+  --accent-color: #ff0070;
+  --decor-color: #ff0070;
+  --title-color: #db00ff;
   --title__font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --subtitle-decor-color: #000028;
-  --text-color: #F1B2CE;
+  --text-color: #f1b2ce;
   --hover-border-color: rgba(255 0 112 / 0.4);
-  --section-title-color: #FF0070;
-  /*: clamp(22.188rem, 2.29vw + 21.651rem, 22.75rem);*/
-} 
-  /*--page-margin: clamp(1.875rem, 0.086rem + 7.634vi, 3.75rem);*/
-  
-  
-  /*--main-font: 'IBM Plex mono', sans-serif;*/
+  --section-title-color: #ff0070;
+}
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-

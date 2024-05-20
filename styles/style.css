@@ -1,9 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
- /* display: flex;
-  flex-direction: column;
-  row-gap: clamp(1.875rem, 12.723vw - 1.107rem, 5rem);*/
   font-family:'IBM Plex mono', sans-serif;
   background-image: var(--bg-image);
   background-position: center;
@@ -22,8 +19,6 @@
   padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
   margin-block-end: clamp(2.5rem, 5.089vw + 1.307rem, 3.75rem);
 }
-
-
 
 .header::before {
   content: "";
@@ -70,17 +65,6 @@ box-shadow:  0 0 4px 2px red ;
 
 .header__theme-menu {
   justify-self: end;
-  }
-
-
-
-.header__theme-menu-list {
-
-}
-
-.header__theme-menu-item {
-  
- 
 }
 
 .header__theme-menu-button {
@@ -123,19 +107,11 @@ cursor: pointer;
 }
 
 .header .subtitle {
-  margin: 0;
   justify-self: end;
   inline-size: clamp(22.188rem, 2.29vw + 21.651rem, 22.75rem);
- /* max-inline-size: 50%; */
+  margin: 0;
 }
 
-
-/*.subtitle-decor {
-  font-size: 18px;
-  font-weight: bold;
-  background-color: var(--accent-color, #FF0070);
-  color: var(--subtitle-decor-color, #000028); 
-}*/
 .content {
   display: flex;
   flex-direction: column;
@@ -146,10 +122,6 @@ cursor: pointer;
 .main__section {
   padding-inline: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
 }
- 
-/*.main__section:not(:last-child) {
-  margin-block-end: clamp(1.875rem, 12.723vw - 1.107rem, 5rem);
-}*/
 
 .section__title {
   font-size: 18px;
@@ -157,7 +129,6 @@ cursor: pointer;
   font-weight: bold;
   color: var(--section-title-color, #FF0070);
   margin-block-end: 20px;
-  
 }
 
 .subtitle {
@@ -214,16 +185,7 @@ cursor: pointer;
   margin: 0;
 }
 
-.gallery-container {
-
-}
-
-.gallery-container:not(:last-child) {
- /* margin-block-end: 10px;*/
-}
-
 .image {
-  /*display: block;*/
   inline-size: 100%;
   block-size: 100%;
   object-position: center;
@@ -263,15 +225,6 @@ cursor: pointer;
 .footer .title {
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
-
-/*.title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
-  font-weight: bold;
-  color: var(--header__title-color, #DB00FF);
-  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-}*/
-
 @media screen and (width >= 768px) {
   :root {
     --title__font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
