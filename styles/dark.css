@@ -6,6 +6,7 @@
 .page.theme_dark {
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #FF0070;
+  --decor-color: #FF0070;
   --title-color: #DB00FF;
   --subtitle-decor-color: #000028;
   --text-color: #F1B2CE;
