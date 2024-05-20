@@ -13,7 +13,7 @@
 .header {
   display: grid;
   position: relative;
-  grid-template-rows: 1fr min-content  1fr; 
+  grid-template-rows: 1fr min-content 1fr; 
   align-items: center;
   block-size: 100vb;
   padding: clamp(0.625rem, 0.029rem + 2.545vi, 1.25rem);
