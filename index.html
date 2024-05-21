@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="icon" href="./images/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
@@ -44,11 +45,11 @@
         </ul>
       </nav>
       <h1 class="title">no focus</h1>
-      <h3 class="subtitle">
+      <p class="subtitle">
         Что делать, когда не можешь делать ничего<br />
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо
-      </h3>
-      <div class="decorated-zone-item" aria-hidden="true">rec</div>
+      </p>
+      <span class="decorated-zone-item" aria-hidden="true">rec</span>
     </header>
     <main class="content">
       <section class="main__section">
@@ -63,6 +64,7 @@
             <a
               class="link"
               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7075496/"
+              target="_blank"
               >выяснили</a
             >, что мозгу тяжело концентрироваться даже на двух делах
             одновременно. А когда в поле внимания попадает несколько важных
@@ -123,7 +125,7 @@
         </h2>
         <div class="text-container difference-text-container">
           <h3 class="subtitle">5 простых (на самом деле не очень) советов</h3>
-          <h3 class="subtitle">Представьте небо и облака</h3>
+          <h4 class="subtitle">Представьте небо и облака</h4>
           <p class="text">
             Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
             успокоиться. Ведь часто именно тревожные мысли о сложных задачах как
@@ -134,19 +136,20 @@
             вернуться в настоящий момент, а не волноваться о потенциальных
             проблемах из будущего.
           </p>
-          <h3 class="subtitle">Включите музыку</h3>
+          <h4 class="subtitle">Включите музыку</h4>
           <p class="text">
             Но не любую, и не любимую. Любимая может быть связана с сильными
             положительными эмоциями, которые тоже очень сильно отвлекают.
             Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще
             попробовать включить плейлист в «белым шумом» или нейромузыкой.
           </p>
-          <h3 class="subtitle">Прогуляйтесь</h3>
+          <h4 class="subtitle">Прогуляйтесь</h4>
           <p class="text">
             Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
             <a
               class="link"
               href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+              target="_blank"
               >показал</a
             >, что созерцание природы повышает концентрацию, в то время как
             после просмотра городских пейзажей она наоборот понижается. Можно
@@ -154,14 +157,14 @@
             мозг поступит ещё больше кислорода и он будет лучше работать. Но и
             простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
-          <h3 class="subtitle">Хорошо ешьте</h3>
+          <h4 class="subtitle">Хорошо ешьте</h4>
           <p class="text">
             Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
             которые препятствуют резким скачкам сахара в крови. Например, с
             высоким содержанием клетчатки: овощи, ягоды, бобовые (нут, чечевица,
             фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
           </p>
-          <h3 class="subtitle">Читайте</h3>
+          <h4 class="subtitle">Читайте</h4>
           <p class="text">
             Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы
             прочитать пост в соцсети, достаточно нескольких минут или даже
@@ -170,32 +173,6 @@
           </p>
         </div>
       </section>
-      <!-- <section class="gallery main__section">
-        <div class="gallery-container">
-          <h3 class="section__subtitle subtitle-decor">А можно в картинках?</h3>
-        </div>
-        <div class="gallery-container">
-          <picture>
-            <img class="image image-sunset" src="./images/sunset.png" alt="мультипликационное изображение заката">
-          </picture>
-        </div>
-        <div class="gallery-container">
-          <img class="image image-ice-cream" src="./images/ice-cream.png" alt="мультипликационное изображение мороженого в блюдце">
-        </div>
-        <div class="gallery-container">
-          <img class="image image-tape" src="./images/tape.png" alt="мультипликационное изображение аудио-кассеты">
-        </div>
-        <div class="gallery-container">
-          <picture>
-            <img class="image image-books" src="./images/books.png" alt="мультипликационное изображение стопки книг">
-          </picture>
-        </div>
-        <div class="gallery-container">
-          <picture>
-            <img class="image image-street" src="./images/street.png" alt="мультипликационное изображение улицы в фиолетовых оттенках">
-          </picture>
-        </div>
-      </section>-->
       <section class="gallery main__section">
         <h3 class="subtitle">А можно в картинках?</h3>
 
@@ -203,34 +180,39 @@
           class="image image-sunset"
           src="./images/sunset.png"
           alt="мультипликационное изображение заката"
+          loading="lazy"
         />
 
         <img
           class="image image-ice-cream"
           src="./images/ice-cream.png"
           alt="мультипликационное изображение мороженого в блюдце"
+          loading="lazy"
         />
 
         <img
           class="image image-tape"
           src="./images/tape.png"
           alt="мультипликационное изображение аудио-кассеты"
+          loading="lazy"
         />
 
         <img
           class="image image-books"
           src="./images/books.png"
           alt="мультипликационное изображение стопки книг"
+          loading="lazy"
         />
 
         <img
           class="image image-street"
           src="./images/street.png"
           alt="мультипликационное изображение улицы в фиолетовых оттенках"
+          loading="lazy"
         />
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer decorated-zone">
       <h2 class="title">focus</h2>
     </footer>
     <script src="./scripts/script.js"></script>

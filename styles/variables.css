@@ -9,7 +9,9 @@
   --hover-border-color: rgba(255 0 112 / 0.4);
   --section-title-color: #ff0070;
 }
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
+@media screen and (width >= 768px) {
+  :root {
+    --title__font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
