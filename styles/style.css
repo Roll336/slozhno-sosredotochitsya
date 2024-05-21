@@ -196,6 +196,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100vb;
+  min-block-size: 668px;
 }
 
 .footer .title {
