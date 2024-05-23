@@ -43,7 +43,7 @@
 .decorated-zone-item {
   position: absolute;
   right: clamp(1.188rem, 2.799vw + 0.531rem, 1.875rem);
-  top: clamp(0.625rem, 2.29vw + 0.088rem, 1.188rem);
+  top: clamp(.625rem, 2.7481vw + -.0191rem, 1.3rem);
   text-transform: uppercase;
   font-size: 1.1rem;
   color: var(--accent-color, #ff0070);
@@ -58,7 +58,7 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px red;
+  box-shadow: 0 0 4px 2px var(--decor-color, #ff0070);
 }
 
 .header__theme-menu {
